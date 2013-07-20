@@ -24,7 +24,7 @@
 				$_SESSION['pseudo'] = $donnees['pseudo'];
 				$_SESSION['guid'] = $donnees['guid'];
 				//REDIRECTION
-				echo'<meta http-equiv="refresh" content="3; URL=#">';
+				echo'<meta http-equiv="refresh" content="3; URL=http://reckless-project.exano.net/auth/index.php?cat=auth&action=check">';
 			}
 			else {
 			//ERROR
@@ -57,9 +57,19 @@
 								echo '<input type="text" name="secretq"  value="" placeholder="Secret Question" tabindex="7" />';
 								echo '<label>Secret Answer</label>';
 								echo '<input type="text" name="reps"  value="" placeholder="Secret Answer" tabindex="8" />';
-								echo ' <input class="apply" type="submit" name="send" value=""/>';
+								//echo ' <input class="apply" type="submit" name="send" value=""/>';
+								echo'<br/>';
+								  echo'<input name="send" class="btn btn-inverse" value="Send !" type="submit">';
 												
 				echo '	</form>   ';   
+			}
+						function AuthTest() {
+			//REGISTER FORM FUNCTION
+		    if(isset($_SESSION['login'])){
+			echo'<p>Logged as '.$_SESSION['login'].' </p>';
+			}else{
+			echo'<p>Not Logged , <a href="index.php?cat=auth&action=index"><b>Connect-now ?</b></a>';
+			}
 			}
 			function Register() {
 			// REGISTER FUNCTION 4 ANCESTRA DERIVATIONS 
