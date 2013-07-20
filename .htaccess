@@ -1,0 +1,9 @@
+RewriteEngine on 
+RewriteRule ^changelog$ /changelog/index.php?cat=changelog&action=index [L]
+RewriteRule ^update-([0-9]*).* /changelog/index.php?cat=changelog&action=view&id=$1 
+RewriteRule ^changelog-index$ /changelog/index.php?cat=changelog&action=index [L]
+RewriteRule ^login$ /changelog/index.php?cat=auth&action=index [L]
+RewriteRule ^add-more$ /changelog/index.php?cat=changelog&action=add [L]
+
+
+
